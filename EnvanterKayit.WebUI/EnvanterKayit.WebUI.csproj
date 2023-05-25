@@ -24,4 +24,14 @@
     <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\admin\startbootstrap-sb-admin-gh-pages\assets\demo\chart-area-demo.js" />
+    <None Include="wwwroot\admin\startbootstrap-sb-admin-gh-pages\assets\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\admin\startbootstrap-sb-admin-gh-pages\assets\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\admin\startbootstrap-sb-admin-gh-pages\assets\demo\datatables-demo.js" />
+    <None Include="wwwroot\admin\startbootstrap-sb-admin-gh-pages\assets\img\error-404-monochrome.svg" />
+    <None Include="wwwroot\admin\startbootstrap-sb-admin-gh-pages\js\datatables-simple-demo.js" />
+    <None Include="wwwroot\admin\startbootstrap-sb-admin-gh-pages\js\scripts.js" />
+  </ItemGroup>
+
 </Project>
