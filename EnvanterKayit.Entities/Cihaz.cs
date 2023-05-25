@@ -15,8 +15,6 @@ namespace EnvanterKayit.Entities
         public int MarkaId { get; set; }
         [Display(Name = "Cihaz Türü"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public int TurId { get; set; }
-        [Display(Name = "Öğretmen"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
-        public int OgretmenId { get; set; }
         [StringLength(50), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string Renk { get; set; }
        
@@ -37,6 +35,5 @@ namespace EnvanterKayit.Entities
         public string Notlar { get; set; }
         public virtual Marka? Marka { get; set; }
         public virtual Tur? Tur { get; set; }
-        public virtual Ogretmen? Ogretmen { get; set; }
     }
 }

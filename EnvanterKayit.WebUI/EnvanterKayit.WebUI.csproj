@@ -13,4 +13,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EnvanterKayit.DataLayer\EnvanterKayit.DataLayer.csproj" />
+    <ProjectReference Include="..\EnvanterKayit.Service\EnvanterKayit.Service.csproj" />
+  </ItemGroup>
+
 </Project>
