@@ -19,7 +19,7 @@ namespace EnvanterKayit.Entities
         public DateTime SatisTarihi { get; set; }
         [Display(Name = "Cihaz")]
         public virtual Cihaz? Cihaz { get; set; }
-        [Display(Name = "Müşteri")]
+        [Display(Name = "Notlar")]
         public string? Notlar { get; set; }
     }
 }

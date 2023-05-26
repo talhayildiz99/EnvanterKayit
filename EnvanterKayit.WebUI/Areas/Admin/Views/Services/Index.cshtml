@@ -1,0 +1,88 @@
+﻿@model IEnumerable<EnvanterKayit.Entities.Servis>
+
+@{
+    ViewData["Title"] = "Servisler";
+}
+
+<h1>Servisler</h1>
+
+<p>
+    <a class="btn btn-outline-warning" asp-action="Create">Yeni Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ServisAcilisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CihazSorunu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServisUcreti)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServistenCikisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yapılanİslemler)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GarantiKapsamindaMi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cihaz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SeriNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notlar)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServisAcilisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CihazSorunu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServisUcreti)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServistenCikisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yapılanİslemler)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GarantiKapsamindaMi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cihaz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeriNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notlar)
+            </td>
+            <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

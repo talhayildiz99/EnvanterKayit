@@ -1,0 +1,89 @@
+﻿@model IEnumerable<EnvanterKayit.Entities.Cihaz>
+
+@{
+    ViewData["Title"] = "Cihazlar";
+}
+
+<h1>Cihazlar</h1>
+
+<p>
+    <a class="btn btn-outline-warning" asp-action="Create">Yeni Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Renk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modeli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.İslemcisi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EkranKartı)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SeriNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelYili)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SatistaMi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notlar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tur)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Renk)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modeli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.İslemcisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EkranKartı)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SeriNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModelYili)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SatistaMi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Notlar)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marka.Adi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tur.Adi)
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

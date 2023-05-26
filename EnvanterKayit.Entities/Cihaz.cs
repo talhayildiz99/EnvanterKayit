@@ -34,6 +34,7 @@ namespace EnvanterKayit.Entities
         [Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string Notlar { get; set; }
         public virtual Marka? Marka { get; set; }
+        [Display(Name = "Cihaz Türü"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public virtual Tur? Tur { get; set; }
     }
 }
