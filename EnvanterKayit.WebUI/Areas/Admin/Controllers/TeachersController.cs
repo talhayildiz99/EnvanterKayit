@@ -1,12 +1,13 @@
 ﻿using EnvanterKayit.Entities;
 using EnvanterKayit.Service.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EnvanterKayit.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"), Authorize]
     public class TeachersController : Controller
     {
         private readonly IService<Ogretmen> _service;

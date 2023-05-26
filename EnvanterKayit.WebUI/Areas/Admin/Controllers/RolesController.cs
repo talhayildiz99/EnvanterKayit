@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EnvanterKayit.WebUI.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"), Authorize]
     public class RolesController : Controller
     {
         private readonly IService<Rol> _service;
