@@ -28,7 +28,7 @@ namespace EnvanterKayit.Entities
         public bool AktifMi { get; set; }
         [Display(Name = "Eklenme Tarihi"), ScaffoldColumn(false)]
         public DateTime? EklenmeTarihi { get; set; } = DateTime.Now;
-        [Display(Name = "Rol"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
+        [Display(Name = "Rol")]
         public virtual Rol? Rol { get; set; }
     }
 }
