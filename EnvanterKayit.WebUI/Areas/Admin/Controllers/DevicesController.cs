@@ -24,6 +24,8 @@ namespace EnvanterKayit.WebUI.Areas.Admin.Controllers
         // GET: DevicesController
         public async Task<ActionResult> IndexAsync()
         {
+            ViewBag.MarkaId = new SelectList(await _serviceMarka.GetAllAsync(), "Id", "Adi");
+            ViewBag.TurId = new SelectList(await _serviceTur.GetAllAsync(), "Id", "Adi");
             var model = await _service.GetAllAsync();
             return View(model);
         }

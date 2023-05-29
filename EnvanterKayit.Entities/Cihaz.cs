@@ -18,9 +18,9 @@ namespace EnvanterKayit.Entities
        
         [StringLength(50), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string Modeli { get; set; }
-        [Display(Name = "İşlemci"), StringLength(50), Required(ErrorMessage = "{0} Boş Bırakılamaz!")] 
+        [Display(Name = "İşlemci"), StringLength(50)] 
         public string İslemcisi{ get; set; }
-        [Display(Name = "Ekran Kartı"), StringLength(50), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
+        [Display(Name = "Ekran Kartı"), StringLength(50)]
         public string EkranKartı { get; set; }
         [Display(Name = "Seri No"), StringLength(50), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
         public string SeriNo{ get; set; }

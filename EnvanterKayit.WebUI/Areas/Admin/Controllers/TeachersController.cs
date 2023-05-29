@@ -23,6 +23,7 @@ namespace EnvanterKayit.WebUI.Areas.Admin.Controllers
         // GET: TeachersController
         public async Task<ActionResult> IndexAsync()
         {
+            ViewBag.CihazId = new SelectList(await _serviceCihaz.GetAllAsync(), "Id", "Modeli");
             var model = await _service.GetAllAsync();
             return View(model);
         }

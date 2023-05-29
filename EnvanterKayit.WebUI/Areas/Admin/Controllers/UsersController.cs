@@ -22,6 +22,7 @@ namespace EnvanterKayit.WebUI.Areas.Admin.Controllers
         // GET: UsersController
         public async Task<ActionResult> IndexAsync()
         {
+            ViewBag.RolId = new SelectList(await _serviceRol.GetAllAsync(), "Id", "Adi");
             var model = await _service.GetAllAsync();
             return View(model);
         }

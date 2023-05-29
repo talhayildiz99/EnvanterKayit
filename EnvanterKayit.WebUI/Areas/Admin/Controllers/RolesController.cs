@@ -3,6 +3,7 @@ using EnvanterKayit.Service.Abstract;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EnvanterKayit.WebUI.Areas.Admin.Controllers
 {
@@ -19,6 +20,7 @@ namespace EnvanterKayit.WebUI.Areas.Admin.Controllers
         // GET: RolesController
         public async Task<ActionResult> IndexAsync()
         {
+            ViewBag.RolId = new SelectList(await _service.GetAllAsync(), "Id", "Adi");
             var model = await _service.GetAllAsync();
             return View(model);
         }
