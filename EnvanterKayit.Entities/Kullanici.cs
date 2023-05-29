@@ -11,6 +11,7 @@ namespace EnvanterKayit.Entities
     public class Kullanici : IEntity
     {
         public int Id { get; set; }
+        [Display(Name ="Rol")]
         public int RolId { get; set; }
 
         [StringLength(50), Display(Name = "Adı"), Required(ErrorMessage = "{0} Boş Bırakılamaz!")]
